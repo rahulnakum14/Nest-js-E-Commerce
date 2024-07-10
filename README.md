@@ -37,3 +37,54 @@ nestjs-clean-architecture/
 ├── package.json
 ├── tsconfig.json
 ```
+
+## Nest Js Clean Architecture With Graphql
+
+```
+src/
+|-- application/
+|   |-- dto/
+|   |   |-- create-user.dto.ts
+|   |   |-- update-user.dto.ts
+|   |-- exceptions/
+|   |   |-- user-not-found.exception.ts
+|   |-- interfaces/
+|       |-- user-repository.interface.ts
+|   |-- use-cases/
+|       |-- create-user.usecase.ts
+|       |-- get-user.usecase.ts
+|       |-- update-user.usecase.ts
+|       |-- delete-user.usecase.ts
+|
+|-- domain/
+|   |-- entities/
+|       |-- user.entity.ts
+|
+|-- infrastructure/
+|   |-- config/
+|   |   |-- config.module.ts
+|   |   |-- config.service.ts
+|   |-- database/
+|   |   |-- database.module.ts
+|   |   |-- database.providers.ts
+|   |-- logger/
+|   |   |-- logger.module.ts
+|   |   |-- logger.service.ts
+|   |-- repositories/
+|       |-- user.repository.ts
+|
+|-- presentation/
+|   |-- controllers/
+|       |-- user.controller.ts
+|   |-- filters/
+|       |-- http-exception.filter.ts
+|   |-- interceptors/
+|       |-- logging.interceptor.ts
+|   |-- graphql/
+|       |-- schema.graphql
+|   |-- presenters/
+|       |-- user.presenter.ts
+|
+|-- app.module.ts
+|-- main.ts
+```
